@@ -3,7 +3,7 @@ MAINTAINER lyly
 ENV TIME_ZOME Asia/Shanghai
 ARG red="redis-4.0.14"
 ADD $red.tar.gz /tmp
-RUN yum -y install gcc gcc-c++ libstdc++-devel git \
+RUN yum -y install make gcc gcc-c++ libstdc++-devel git \
 && cd /tmp/$red \
 && make && make install \
 && cp redis.conf /usr/local/bin \
